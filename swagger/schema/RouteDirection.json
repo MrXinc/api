@@ -1,0 +1,33 @@
+{
+    "type": "object",
+    "required": [
+        "route",
+        "directions"
+    ],
+    "properties": {
+        "agency" : {
+            "$ref": "./Agency.json"
+        },
+        "route": {
+            "$ref": "./Route.json"
+        },
+        "directionName": {
+            "type": "string"
+        },
+        "destination": {
+            "type": "string"
+        },
+        "stops": {
+            "type": "array",
+            "items": {
+                "$ref": "./RouteStop.json"
+            }
+        },
+        "geom": {
+            "$ref": "./geometry.json"
+        },
+        "bbox": {
+            "$ref": "./parameters.json#/bbox"
+        }
+    }
+}

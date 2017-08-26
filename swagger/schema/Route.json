@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "required": [
+        "id",
+        "name"
+    ],
+    "properties": {
+        "agency" : {
+          "$ref": "./Agency.json"
+        },
+        "id": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "sortOrder": {
+            "type": "integer"
+        },
+        "geom": {
+            "$ref": "./geometry.json"
+        },
+        "bbox": {
+            "$ref": "./parameters.json#/bbox"
+        }
+    }
+}

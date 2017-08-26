@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "required": [
+        "stop",
+        "order"
+    ],
+    "properties": {
+        "agency" : {
+            "$ref": "./Agency.json"
+        },
+        "route" : {
+          "$ref": "./Route.json"
+        },
+        "stop" : {
+          "$ref": "./Stop.json"
+        },
+        "order": {
+            "type": "integer"
+        },
+        "distance": {
+            "type": "integer"
+        },
+        "headsign": {
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "required": [
+        "id",
+        "name"
+    ],
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "timezone": {
+            "type": "string"
+        },
+        "lang": {
+            "type": "string"
+        },
+        "url": {
+            "type": "string"
+        },
+        "fareUrl": {
+            "type": "string"
+        },
+        "email": {
+            "type": "string"
+        }
+    }
+}
