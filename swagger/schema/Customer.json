@@ -6,19 +6,13 @@
     ],
     "properties": {
         "agency" : {
-          "$ref": "./Agency.json"
+          "$ref": "./ContactInfo.json"
         },
         "id": {
             "type": "string"
         },
         "name": {
             "type": "string"
-        },
-        "amenities": {
-            "type": "array",
-            "items": {
-                "type": "string"
-            }
         },
         "geom": {
             "$ref": "./geometry.json"

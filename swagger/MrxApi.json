@@ -1,0 +1,88 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "0.1.0",
+        "title": "Mr. X API",
+        "description": "Customer / contact api \n(tbd upgrade to openapi 3.0 asap)",
+        "termsOfService": "http://xxx/api/blob/master/README.md#terms",
+        "contact": {
+            "name": "Mr X",
+            "email": "api@opentransittools.com",
+            "url": "http://opentransittools.com/api"
+        },
+        "license": {
+            "name": "Mozilla Public License 2.0",
+            "url": "http://opentransittools.com/api/blob/master/LICENSE"
+        }
+    },
+    "host": "api.opentransittools.com",
+    "basePath": "/v1",
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/customers": {
+            "get": {
+                "description": "Returns all customers loaded in the system",
+                "operationId": "a list customers",
+                "parameters": [
+                    {
+                        "$ref": "./schema/parameters.json#/offsetParam"
+                    },
+                    {
+                        "$ref": "./schema/parameters.json#/limitParam"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "list of available customers",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "./schema/Customer.json"
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "schema": {
+                            "$ref": "./schema/Error.json"
+                        }
+                    }
+                }
+            }
+        },
+
+        "/customers/{customer_id}": {
+            "get": {
+                "description": "Returns all customers loaded in the system",
+                "operationId": "a list customers",
+                "parameters": [
+                    {
+                        "$ref": "./schema/parameters.json#/agencyIdParam"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "single customer response",
+                        "schema": {
+                            "$ref": "./schema/Customer.json"
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "schema": {
+                            "$ref": "./schema/Error.json"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
